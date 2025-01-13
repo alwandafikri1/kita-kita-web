@@ -1,0 +1,115 @@
+body {
+    background-image: url('ben-kim-7D4jD_Gk6GU-unsplash.jpg'); /* Ganti dengan path gambar resolusi tinggi */
+    background-position: center; /* Pusatkan gambar latar belakang */
+    background-size: cover; /* Sesuaikan ukuran gambar agar menutupi seluruh layar */
+    background-repeat: no-repeat; /* Jangan ulangi gambar latar belakang */
+    filter: none; /* Pastikan tidak ada filter blur yang diterapkan */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Untuk mencegah scrollbar muncul karena efek hujan */
+    position: relative; /* Tambahkan posisi relatif untuk efek hujan */
+}
+
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    background: transparent;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    z-index: 1; /* Pastikan login-container berada di atas efek hujan */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container input[type="password"] {
+    flex: 1;
+}
+
+.password-container button {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.password-container button:hover {
+    color: #000;
+}
+
+.login-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #00d300;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #00b300;
+}
+
+.rain {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    animation: fall linear infinite;
+    z-index: 0; /* Pastikan efek hujan berada di belakang elemen lainnya */
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
